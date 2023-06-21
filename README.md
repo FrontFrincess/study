@@ -17,11 +17,11 @@
 
 | 이니셜 | Github | 블로그 |
 | --- | --- | --- |
-| KGY | https://github.com/HI-CLAIRE | https://hi-claire.tistory.com |
-| DSP | https://github.com/devsomda | https://velog.io/@somda |
-| SYJ | https://github.com/eugenieseo16 | https://velog.io/@eugenieseo16 |
-| OYJ | https://github.com/yjohbjects | https://yjohbjects.tistory.com |
-| JCL | https://github.com/chaedev3 | https://velog.io/@chaedev3 |
+| KGY | [@HI-CLAIRE](https://github.com/HI-CLAIRE) | [우당탕탕 규투리의 개발일지](https://hi-claire.tistory.com) |
+| DSP | [@devsomda](https://github.com/devsomda) | [.DS_Store](https://velog.io/@somda) |
+| SYJ | [@eugenieseo16](https://github.com/eugenieseo16) | [eugenieseo16.log](https://velog.io/@eugenieseo16) |
+| OYJ | [@yjohbjects](https://github.com/yjohbjects) | [yjohbjects](https://yjohbjects.tistory.com) |
+| JCL | [@chaedev3](https://github.com/chaedev3) | [chaedev3.log](https://velog.io/@chaedev3) |
 
 ## ✅ commit 규칙
 
