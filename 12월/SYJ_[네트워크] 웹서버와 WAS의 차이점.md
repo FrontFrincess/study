@@ -2,8 +2,6 @@
 
 Server가 무엇인지, Web Server, Web Application Server가 각각 무엇인지에 대해 알아보자.
 
-🔥⚡🌟<span style="background-color:#fff5d8;"> </span> 
-
 ### 🔥서버(Server)란?
 
 <span style="background-color:#fff5d8;">**네트워크를 통해 클라이언트에게 데이터나 서비스를 제공하는 컴퓨터 시스템**</span>
@@ -22,7 +20,7 @@ Server가 무엇인지, Web Server, Web Application Server가 각각 무엇인�
 - **리소스 공유**: 네트워크에 연결된 여러 클라이언트와 자원을 공유하며 효율적으로 작업을 수행
 
 서버의 종류는 많고, 서버의 역할은 서비스에 의해 정해진다. 시스템 요구 사항을 정의하다보면 어떤 서버를 구축해야 할지 판단이 가능해질 것이고, 이후에는 지원하는 운영체제나 프로그램 환경 등을 고려하여 어떤 소프트웨어를 설치할 것인지를 생각해야 한다. 서버 소프트웨어는 일반적으로 사용하는 것이 정해져 있기 때문에 보통 그 중에서 골라 사용한다. 
-![](https://velog.velcdn.com/images/eugenieseo16/post/ae396cb0-a0d6-4f38-b52f-b44db4af0ada/image.png)
+![](https://velog.velcdn.com/images/eugenieseo16/post/ae396cb0-a0d6-4f38-b52f-b44db4af0ada/image.png) 
 
 ### 🔥웹 서버(Web Server)란?
 
@@ -30,7 +28,7 @@ Server가 무엇인지, Web Server, Web Application Server가 각각 무엇인�
 
 <span style="background-color:#fff5d8;">**HTTP 또는 HTTPS를 통해 클라이언트가 요청하는 HTML 문서나 오브젝트를 전송해주는 서비스 프로그램**</span>
 
-<span style="background-color:#def5d8;">하드웨어 측면에서의 웹서버</span>와 <span style="background-color:#FFDAB9;">소프트웨어 측면에서의 웹서버</span>로 구분된다. 웹 서버 소프트웨어를 구동하는 하드웨어도 웹 서버라고 부르기 때문에 헷갈릴 수 있다.
+<span style="background-color:#def5d8;">하드웨어 측면에서의 웹서버</span>와 <span style="background-color:#FFc0c1;">소프트웨어 측면에서의 웹서버</span>로 구분된다. 웹 서버 소프트웨어를 구동하는 하드웨어도 웹 서버라고 부르기 때문에 헷갈릴 수 있다.
 
 ### ⚡하드웨어 측면에서의 웹 서버
 
@@ -38,7 +36,7 @@ Server가 무엇인지, Web Server, Web Application Server가 각각 무엇인�
 
 ### ⚡소프트웨어 측면에서의 웹 서버
 
-소프트웨어 측면에서의 웹 서버는 **클라이언트로부터의 HTTP 요청 받아 HTML 문서와 같은 웹 페이지 구성요소를 클라이언트에게 반환하는 프로그램**이다. 
+소프트웨어 측면에서의 웹 서버는 **클라이언트로부터의 HTTP 요청 받아 HTML 문서와 같은 웹 페이지 구성요소를 클라이언트에게 반환하는 프로그램**이다.
 
 주로 HTML 문서, 이미지, CSS, 자바스크립트 파일 등을 전달하며 클라이언트로부터 받은 콘텐츠를 저장하거나 처리하는 역할도 한다. 웹 서버는 <span style="background-color:#E6E6FA;">**정적 콘텐츠**를 제공하는 데 최적화</span>되어있기 때문에 동적인 요청 처리는 웹 서버 자체적으로 어려울 수 있으며, 이 경우 추가적인 애플리케이션 서버나 데이터베이스 서버와 연동하여 처리한다.
 
@@ -71,7 +69,31 @@ Server가 무엇인지, Web Server, Web Application Server가 각각 무엇인�
 > **템플릿 엔진(Template Engine)?**
 > 템플릿 엔진은 웹 페이지의 구조를 정의하는 프레임워크 또는 라이브러리다. 동적으로 생성된 데이터를 웹 페이지의 특정 부분에 삽입하여 최종적으로 사용자에게 전달될 HTML 문서를 생성합니다. JSP, Thymeleaf,Mustache가 템플릿 엔진이다.
 
+그림과 같이 WAS는 웹 서버의 기능과 웹 컨테이너의 기능을 모두 갖추고 있어 정적인 페이지와 동적인 페이지 처리를 모두 담당할 수 있다.
+
+**하지만 WAS에 모든 업무를 맡기는 것은 위험하다.**
+🌟과부하 위험: WAS가 정적과 동적 콘텐츠 모두를 처리하게 되면, 트래픽이 많은 경우 서버에 과부하가 발생할 수 있다. 
+🌟보안 문제: WAS는 동적 콘텐츠를 처리하기 위해 데이터베이스와 같은 중요한 리소스에 접근한다. 모든 요청을 WAS가 처리하게 되면, 보안 위험이 증가한다.
+
+그렇기 때문에 <span style="background-color:#E6E6FA;">대규모 프로젝트, 트래픽이 많고, 서버에 과부화가 걸릴 일이 많은 애플리케이션의 경우 서버를 분산해야한다. </span>
+
+![](https://velog.velcdn.com/images/eugenieseo16/post/e41ebf57-45d5-4ddb-a425-bac22d8a9596/image.png)
+
+<span style="background-color:#fff5d8;"> 그림과 같이 **웹 서버를 WAS로 부터 분리**하고, 웹 컨테이너만을 가진 **WAS 인스턴스를 확장**</span>하면 대규모 트래픽에 안정적으로 대응할 수 있다. 이를 통해 동적 콘텐츠 요청에 효과적으로 대응하고 웹 서버와 WAS 간의 부하를 균등하게 분산 할 수 있다.
+
+이 경우, 분리된 웹 서버는 다음과 같은 기능들을 수행한다.
+![](https://velog.velcdn.com/images/eugenieseo16/post/b5914693-d416-4a68-888d-e55c8cd23cfb/image.png)
+
+🌟 <span style="background-color:#fff5d8;">**캐싱(Caching)**</span>: 자주 요청되는 콘텐츠를 캐시에 저장하여, 동일한 요청이 들어왔을 때 빠른 응답을 가능하게 한다. 이는 데이터 재사용을 통해 응답 시간을 단축하고 서버 자원 사용을 최적화한다.
+
+🌟 <span style="background-color:#fff5d8;">**로드 밸런싱(Load Balancing)**</span>: 트래픽이 많을 때 웹 서버는 요청을 여러 서버에 균등하게 분산시켜 처리한다. 이는 각 서버의 부하를 줄이고 전체 시스템의 안정성을 유지하며 서비스 중단을 방지한다.
+
+🌟 <span style="background-color:#fff5d8;">**Health Check**</span>: 웹 서버는 백엔드 서버의 상태를 정기적으로 검사하여 문제가 있는 서버를 트래픽에서 제외시킨다. 서버의 건강 상태를 모니터링하여 장애 발생 시 즉시 대응한다.
+
+🌟 <span style="background-color:#fff5d8;">**리버스 프록시(Reverse Proxy)**</span>: 웹 서버는 클라이언트의 요청을 대신 처리하고 그 결과를 반환한다. 이 과정에서 백엔드 서버의 정보를 숨기고 추가적인 보안 및 암호화 기능을 제공한다.
+
 > 참고:
 > [[서버 가이드북] 1. 서버(Server) 란?](https://lipcoder.tistory.com/514)
 > [웹 서버란 무엇일까?](https://developer.mozilla.org/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
 > [코드 연구소:티스토리](https://code-lab1.tistory.com/199)
+> [우아한테크코스의 10분 테크토크](https://www.youtube.com/watch?v=31tKPguQ1sk&t=359)
